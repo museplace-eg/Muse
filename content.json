@@ -1,0 +1,215 @@
+{
+ "logo": "img/1.png",
+ "hero": {
+  "img": "img/2.jpg",
+  "1": {
+   "ar": "مش مجرد قهوة…",
+   "en": "Not just coffee…"
+  },
+  "2": {
+   "ar": "دي مساحة",
+   "en": "it’s a space"
+  },
+  "3": {
+   "ar": "تبدع فيها.",
+   "en": "to create in."
+  },
+  "p": {
+   "ar": "اختار مشروبك، وامسك الفرشاة، وسيب خيالك يرسم لحظتك بطريقتك.",
+   "en": "Pick your drink, hold the brush, and let your imagination paint your moment your way."
+  }
+ },
+ "emptyT": {
+  "ar": "لا توجد ورشات حالياً",
+  "en": "No workshops right now"
+ },
+ "emptyP": {
+  "ar": "هنعلن عن الورشات الجديدة هنا أول ما تتحدد مواعيدها.",
+  "en": "We’ll announce new workshops here as soon as dates are set."
+ },
+ "up": [],
+ "past": [
+  {
+   "img": "img/3.jpg",
+   "c": {
+    "ar": "ورشة الشموع",
+    "en": "Candle Workshop"
+   }
+  }
+ ],
+ "menu": [
+  {
+   "n": {
+    "ar": "القهوة",
+    "en": "Coffee"
+   },
+   "g": [
+    {
+     "n": {
+      "ar": "Espresso Based",
+      "en": "Espresso Based"
+     },
+     "i": "Espresso 75\nEspresso Macchiato 90\nAmericano 85\nTurkish Coffee 55\nDouble Turkish Coffee 65\nFlat White 100\nCortado 100\nCappuccino 110\nLatte 115\nPistachio Latte 165\nSpanish Latte 150\nSalted Vanilla Latte 145\nSalted Caramel Latte 140\nDark Mocha 150\nMuse Latte 155\nWhite Mocha 155"
+    },
+    {
+     "n": {
+      "ar": "Ice Coffee Cups",
+      "en": "Ice Coffee Cups"
+     },
+     "i": "Iced Americano 110\nIced Latte 130\nIced Spanish 160\nIced Pistachio Latte 175\nIced Salted Vanilla 160\nIced White Mocha 155\nIced Salted Caramel 160\nIced Brown Sugar 155"
+    },
+    {
+     "n": {
+      "ar": "Brew Coffee",
+      "en": "Brew Coffee"
+     },
+     "i": "V60 150"
+    }
+   ]
+  },
+  {
+   "n": {
+    "ar": "البلند",
+    "en": "Blended"
+   },
+   "g": [
+    {
+     "n": {
+      "ar": "Coffee Blended",
+      "en": "Coffee Blended"
+     },
+     "i": "Blended Salted Caramel 170\nSpanish Blended 170\nKoffee Frappe 155\nCaramel Koffee Frappe 165\nPistachio Blended 180\nMocha Frappe 165\nWhite Mocha Frappe 165"
+    }
+   ]
+  },
+  {
+   "n": {
+    "ar": "الماتشا",
+    "en": "Matcha"
+   },
+   "g": [
+    {
+     "n": {
+      "ar": "Hot Matcha",
+      "en": "Hot Matcha"
+     },
+     "i": "Matcha Latte 155\nPistachio Matcha 165\nSalted Caramel Matcha 155\nSalted Vanilla Matcha 155\nWhite Matcha Latte 145"
+    },
+    {
+     "n": {
+      "ar": "Blended Matcha",
+      "en": "Blended Matcha"
+     },
+     "i": "Matcha Blended 165\nWhite Matcha Blended 175\nBlended Strawberry Matcha 185\nBlended Salted Matcha 175\nPistachio Matcha Blended 195\nSalted Vanilla Blended 175"
+    },
+    {
+     "n": {
+      "ar": "Ice Cups Matcha",
+      "en": "Ice Cups Matcha"
+     },
+     "i": "Iced Matcha 160\nIced White Matcha 170\nIced Spanish Matcha 170\nIced Strawberry Matcha 180"
+    }
+   ]
+  },
+  {
+   "n": {
+    "ar": "مشروبات",
+    "en": "Drinks"
+   },
+   "g": [
+    {
+     "n": {
+      "ar": "Smoothies",
+      "en": "Smoothies"
+     },
+     "i": "Lemon Mint 80\nOrange Juice 90"
+    },
+    {
+     "n": {
+      "ar": "Mojito",
+      "en": "Mojito"
+     },
+     "i": "Passion Mojito 140\nBlueberry Mojito 140"
+    },
+    {
+     "n": {
+      "ar": "Mojito Redbull",
+      "en": "Mojito Redbull"
+     },
+     "i": "Redbull Berry 200\nRed Passion 200"
+    },
+    {
+     "n": {
+      "ar": "Ice Tea",
+      "en": "Ice Tea"
+     },
+     "i": "Iced Tea Peach 140"
+    }
+   ]
+  },
+  {
+   "n": {
+    "ar": "أكل وكومبو",
+    "en": "Food & Combos"
+   },
+   "g": [
+    {
+     "n": {
+      "ar": "Breakfast",
+      "en": "Breakfast"
+     },
+     "i": "Roast Beef Sandwich 150\nRoast Beef Croissant 130\nTuna Sandwich 170\nPesto Halloumi Sandwich 180\nSmoked Salmon Sandwich 210"
+    },
+    {
+     "n": {
+      "ar": "Desserts",
+      "en": "Desserts"
+     },
+     "i": "Cookies 80"
+    },
+    {
+     "n": {
+      "ar": "Combo (يشمل آيس لاتيه أو لاتيه)",
+      "en": "Combo (includes iced latte or latte)"
+     },
+     "i": "Cookies Combo 150\nRoast Beef Croissant Combo 190\nRoast Beef Sandwich Combo 220\nPesto Halloumi Sandwich Combo 250\nSmoked Salmon Sandwich Combo 300"
+    }
+   ]
+  }
+ ],
+ "menuImg": "img/4.jpg",
+ "note": {
+  "ar": "الأسعار شاملة ضريبة 14%.",
+  "en": "Prices include 14% tax."
+ },
+ "bd": [
+  {
+   "img": "img/5.jpg",
+   "n": "Concrete Bundle",
+   "p": "350 EGP"
+  },
+  {
+   "img": "img/6.jpg",
+   "n": "Cookies Bundle",
+   "p": "150 EGP"
+  }
+ ],
+ "about": {
+  "ar": "Muse مساحة بتجمع الفن والقهوة المختصة. اطلب مشروبك، اتعلّم، وارسم وانت بتشرب قهوتك.",
+  "en": "Muse is a space where art meets specialty coffee. Order your drink, learn something new, and paint while you sip."
+ },
+ "aboutImg": "img/7.jpg",
+ "tag": {
+  "ar": "Where art meets specialty coffee.",
+  "en": "Where art meets specialty coffee."
+ },
+ "ftp": {
+  "ar": "Pick a brush, order your favorite brew, and let your imagination paint the moment. Create · Sip · Connect.",
+  "en": "Pick a brush, order your favorite brew, and let your imagination paint the moment. Create · Sip · Connect."
+ },
+ "loc": "Muse Place — West Mark",
+ "ig": "https://www.instagram.com/museplace.eg?srtk=aW5ycnh2ejliNWJj",
+ "tt": "https://www.tiktok.com/@museplace.eg?_r=1&_t=ZS-9AsESGw1tm0",
+ "lt": "https://linktr.ee/museplace0",
+ "cp": "© 2026 Muse · Art & Specialty Coffee"
+}
