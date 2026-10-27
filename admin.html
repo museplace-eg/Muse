@@ -1,0 +1,61 @@
+<!doctype html><html lang="en" dir="ltr"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover"><title>إدارة Muse</title><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Baloo+Bhaijaan+2:wght@500;800&family=Tajawal:wght@400;500;700&display=swap"><style>*{box-sizing:border-box}body{margin:0}
+.adm{position:fixed;inset:0;z-index:300;background:#F4F1E6;overflow:auto;direction:rtl;font:15px/1.6 Tajawal,sans-serif;color:#0E0066}
+.adm .box{max-width:760px;margin:auto;padding:20px 16px 130px}.adm h2{font-size:26px}
+.adm details{background:#fff;border-radius:16px;margin:12px 0;padding:6px 16px;box-shadow:0 2px 10px #1801a812}
+.adm summary{cursor:pointer;font:800 18px 'Baloo Bhaijaan 2',Tajawal;padding:10px 0}
+.adm label{display:block;font-weight:700;margin:12px 0 4px}
+.adm input,.adm textarea{width:100%;font:inherit;padding:9px 12px;border:1.5px solid #cfc8e8;border-radius:10px;background:#fff;color:#0E0066}
+.adm textarea{min-height:90px}.adm .two{display:grid;grid-template-columns:1fr 1fr;gap:8px}
+.adm button{font:700 14px Tajawal;border:0;border-radius:99px;padding:8px 16px;background:#1801A8;color:#FFE88B;cursor:pointer}
+.adm .g{background:#e9e4fa;color:#1801A8}.adm .r{background:#fde8e8;color:#b00020}
+.adm .it{border:1.5px dashed #c9c0ee;border-radius:14px;padding:4px 12px 12px;margin:10px 0}
+.adm .ith{display:flex;justify-content:space-between;align-items:center;margin-top:8px}
+.adm .im{display:flex;gap:12px;align-items:center}.adm .im img{width:84px;height:84px;object-fit:cover;border-radius:12px;background:#eee}
+.adm .bar2{position:fixed;bottom:0;inset-inline:0;background:#fff;padding:12px 16px;display:flex;gap:10px;align-items:center;box-shadow:0 -4px 20px #1801a822;justify-content:center;flex-wrap:wrap}
+@media(max-width:520px){.adm .two{grid-template-columns:1fr}}
+</style></head><body><div id="ad" class="adm"></div><script>var DEF=[];function df(o){DEF.push(o);return DEF.length-1}
+var BL={ar:'',en:''};
+function B(p,l,m){return {k:'bi',p:p,l:l,m:m}}function I(p,l){return {k:'img',p:p,l:l}}function T(p,l){return {k:'tx',p:p,l:l}}function A(p,l){return {k:'ta',p:p,l:l}}
+function LS(p,l,s,f,d){return {k:'ls',p:p,l:l,s:s,f:f,d:df(d)}}
+var SC=[
+['الشعار والصور الرئيسية',[I('logo','الشعار'),I('hero.img','صورة الصفحة الرئيسية'),I('menuImg','صورة قسم المنيو'),I('aboutImg','صورة قسم عن المكان')]],
+['الصفحة الرئيسية',[B('hero.1','السطر الأول'),B('hero.2','السطر الثاني'),B('hero.3','السطر الثالث'),B('hero.p','الوصف',1)]],
+['الورشات',[B('emptyT','عنوان "لا توجد ورشات"'),B('emptyP','نص "لا توجد ورشات"',1),
+ LS('up','الورشات القادمة (لو أضفت ورشة بتظهر بدل رسالة "لا توجد ورشات")','ورشة قادمة',[I('img','الصورة'),B('c','العنوان'),B('d','التاريخ والتفاصيل')],{img:'',c:BL,d:BL}),
+ LS('past','الورشات السابقة','ورشة سابقة',[I('img','الصورة'),B('c','الاسم')],{img:'',c:BL})]],
+['المنيو',[B('note','ملاحظة الأسعار'),
+ LS('menu','الأقسام','قسم',[B('n','اسم القسم'),LS('g','المجموعات','مجموعة',[B('n','اسم المجموعة'),A('i','الأصناف: صنف في كل سطر والسعر في آخره، مثال: Latte 115')],{n:BL,i:''})],{n:BL,g:[]})]],
+['الباقات',[LS('bd','الباقات','باقة',[I('img','الصورة'),T('n','الاسم'),T('p','السعر (مثال: 350 EGP)')],{img:'',n:'',p:''})]],
+['عن المكان',[B('about','النص',1)]],
+['التواصل والفوتر',[B('tag','العنوان'),B('ftp','الوصف',1),T('loc','الموقع'),T('ig','رابط Instagram'),T('tt','رابط TikTok'),T('lt','رابط Linktree'),T('cp','حقوق النشر')]]];
+function gp(o,p){return p.split('.').reduce(function(a,k){return a==null?a:a[k]},o)}
+function sv(p,v){var a=p.split('.'),l=a.pop(),c=D;a.forEach(function(k){c=c[k]});c[l]=v}
+function fld(f,pre){var p=pre+f.p,v=gp(D,p);
+if(f.k=='bi'){var x=function(l,ph,d){return f.m?'<textarea data-p="'+p+'.'+l+'" placeholder="'+ph+'"'+d+'>'+e(v&&v[l])+'</textarea>':'<input data-p="'+p+'.'+l+'" placeholder="'+ph+'"'+d+' value="'+e(v&&v[l])+'">'};return '<label>'+f.l+'</label><div class="two">'+x('ar','عربي','')+x('en','English',' dir="ltr"')+'</div>'}
+if(f.k=='tx')return '<label>'+f.l+'</label><input data-p="'+p+'" value="'+e(v)+'">';
+if(f.k=='ta')return '<label>'+f.l+'</label><textarea data-p="'+p+'" dir="ltr">'+e(v)+'</textarea>';
+if(f.k=='img')return '<label>'+f.l+'</label><div class="im">'+(v?'<img src="'+v+'" alt="">':'<img alt="">')+'<button class="g" data-up="'+p+'">'+(v?'تغيير الصورة':'اختيار صورة')+'</button></div>';
+var a=v||[];return '<label>'+f.l+'</label>'+a.map(function(_,i){return '<div class="it"><div class="ith"><b>'+f.s+' '+(i+1)+'</b><button class="r" data-del="'+p+'.'+i+'">حذف</button></div>'+f.f.map(function(g){return fld(g,p+'.'+i+'.')}).join('')+'</div>'}).join('')+'<button class="g" data-add="'+p+'|'+f.d+'">+ '+f.s+'</button>'}
+function rA(){var o=[].map.call(ad.querySelectorAll('details'),function(d){return d.open}),sc=ad.scrollTop;
+ad.innerHTML='<div class="box"><h2>إدارة موقع Muse</h2><p>عدّل أي حاجة ثم اضغط «حفظ ونشر». الموقع بيتحدث بعد حوالي دقيقة.</p>'+SC.map(function(s){return '<details><summary>'+s[0]+'</summary>'+s[1].map(function(f){return fld(f,'')}).join('')+'</details>'}).join('')
++'<details><summary>الأمان</summary><label>كلمة سر جديدة (سيبها فاضية لو مش عايز تغيرها)</label><input id="np" type="password" dir="ltr" autocomplete="new-password"></details></div><div class="bar2"><button id="sv">حفظ ونشر</button><button class="g" id="ex">خروج</button><span id="ms"></span></div>';
+[].forEach.call(ad.querySelectorAll('details'),function(d,i){d.open=!!o[i]});ad.scrollTop=sc}
+function cmp(f,max){return new Promise(function(ok){var r=new FileReader();r.onload=function(){var i=new Image();i.onload=function(){var k=Math.min(1,max/Math.max(i.width,i.height)),c=document.createElement('canvas');c.width=Math.round(i.width*k);c.height=Math.round(i.height*k);c.getContext('2d').drawImage(i,0,0,c.width,c.height);ok(c.toDataURL('image/webp',.85))};i.src=r.result};r.readAsDataURL(f)})}
+
+var ad=document.getElementById('ad'),D,sha,CFG={},cnt=0;try{CFG=JSON.parse(localStorage.getItem('museCfg')||'{}')}catch(x){}
+function e(s){return String(s==null?'':s).replace(/[&<>"]/g,function(c){return {'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]})}
+async function gh(p,m,b){var r=await fetch('https://api.github.com/repos/'+CFG.o+'/'+CFG.r+'/contents/'+p+(m?'':'?ref='+encodeURIComponent(CFG.b)),{method:m||'GET',cache:'no-store',headers:{Authorization:'Bearer '+CFG.t,Accept:'application/vnd.github+json'},body:b?JSON.stringify(b):undefined});var j=await r.json().catch(function(){return {}});if(!r.ok)throw new Error(r.status==401?'التوكن غلط أو منتهي':r.status==404?'الريبو أو الملف مش موجود':(j.message||r.status));return j}
+function rL(m){ad.innerHTML='<div class="box" style="max-width:420px;padding-top:8vh;text-align:center"><h2>لوحة إدارة Muse</h2><p>أول مرة بس: ادخل بيانات GitHub (بتتحفظ في متصفحك)</p><label>اسم حسابك على GitHub</label><input id="fo" dir="ltr" value="'+e(CFG.o)+'"><label>اسم الريبو</label><input id="fr" dir="ltr" value="'+e(CFG.r)+'"><label>البرانش</label><input id="fb" dir="ltr" value="'+e(CFG.b||'main')+'"><label>Token (كلمة السر)</label><input id="ft" type="password" dir="ltr" value="'+e(CFG.t)+'"><p id="ms" style="color:#b00020">'+(m||'')+'</p><button id="lgn">دخول</button></div>'}
+async function login(){var q=function(i){return ad.querySelector(i).value.trim()};CFG={o:q('#fo'),r:q('#fr'),b:q('#fb')||'main',t:q('#ft')};ad.querySelector('#ms').textContent='جاري الدخول…';
+try{var j=await gh('content.json');sha=j.sha;D=JSON.parse(decodeURIComponent(escape(atob(j.content.replace(/\n/g,'')))));localStorage.setItem('museCfg',JSON.stringify(CFG));rA()}catch(x){rL(x.message)}}
+async function upl(o){for(var k in o){var v=o[k];if(typeof v=='string'&&v.indexOf('data:image/')==0){var p='img/'+Date.now()+'-'+(cnt++)+'.webp';await gh(p,'PUT',{message:'Upload image',content:v.split(',')[1],branch:CFG.b});o[k]=p}else if(v&&typeof v=='object')await upl(v)}}
+async function save(){var m=ad.querySelector('#ms');m.textContent='جاري الحفظ…';
+try{await upl(D);var r=await gh('content.json','PUT',{message:'Update content',content:btoa(unescape(encodeURIComponent(JSON.stringify(D,null,1)))),sha:sha,branch:CFG.b});sha=r.content.sha;m.textContent='تم الحفظ ✔ الموقع هيتحدث خلال دقيقة تقريباً'}catch(x){m.textContent='تعذر الحفظ: '+x.message}}
+ad.addEventListener('click',function(ev){var b=ev.target.closest('button');if(!b)return;
+if(b.id=='ex'){location.href='index.html';return}if(b.id=='sv'){save();return}if(b.id=='lgn'){login();return}
+if(b.dataset.up){var p=b.dataset.up,fi=document.createElement('input');fi.type='file';fi.accept='image/*';fi.onchange=async function(){if(fi.files[0]){sv(p,await cmp(fi.files[0],p=='logo'?700:1400));rA()}};fi.click();return}
+if(b.dataset.add){var q=b.dataset.add.split('|'),c=gp(D,q[0]);if(!c)sv(q[0],c=[]);c.push(JSON.parse(JSON.stringify(DEF[q[1]])));rA();return}
+if(b.dataset.del){var a=b.dataset.del.split('.'),i=+a.pop();gp(D,a.join('.')).splice(i,1);rA()}});
+ad.addEventListener('input',function(ev){if(ev.target.dataset.p)sv(ev.target.dataset.p,ev.target.value)});
+(CFG.t&&CFG.o&&CFG.r)?login.call(0,ad.innerHTML='<div class="box"><p>جاري الدخول…</p><div style="display:none"><input id="fo"><input id="fr"><input id="fb"><input id="ft"></div><p id="ms"></p></div>',ad.querySelector('#fo').value=CFG.o,ad.querySelector('#fr').value=CFG.r,ad.querySelector('#fb').value=CFG.b||'main',ad.querySelector('#ft').value=CFG.t):rL();
+</script></body></html>
