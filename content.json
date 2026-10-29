@@ -1,7 +1,6 @@
 {
  "logo": "img/1.png",
  "hero": {
-  "img": "img/2.jpg",
   "1": {
    "ar": "مش مجرد قهوة…",
    "en": "Not just coffee…"
@@ -14,6 +13,7 @@
    "ar": "تبدع فيها.",
    "en": "to create in."
   },
+  "img": "img/2.jpg",
   "p": {
    "ar": "اختار مشروبك، وامسك الفرشاة، وسيب خيالك يرسم لحظتك بطريقتك.",
    "en": "Pick your drink, hold the brush, and let your imagination paint your moment your way."
